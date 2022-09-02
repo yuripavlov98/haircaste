@@ -1,0 +1,558 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+// Intro
+
+.first {
+	&__title {
+		font-weight: 500;
+		font-size: 50px;
+		line-height: 60px;
+		color: #fff;
+		max-width: 420px;
+		margin-bottom: 22px;
+        font-weight: 300;
+        
+	}
+}
+.second {
+    &__title {
+        
+        font-weight: 300;
+        font-size: 35px;
+        line-height: 42px;
+        position: relative;
+        padding-bottom: 10px;
+        &::after {
+            content: "";
+            display: block;
+            width: 240px;
+            height: 3px;
+            background-color: #e45f5f;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }  
+    }
+}
+.intro {
+	&__subtitle {
+		font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        max-width: 546px;
+        margin-bottom: 39px;
+	}
+}
+.button {
+    &__enroll {
+        padding: 15px 30px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 16px;
+        background-color: #ff1b1b;
+        border: 0;
+        margin-bottom: 80px;
+        &:hover {
+            background-color: #da1b1b;
+            transition: background-color 0.3s ease 0s;
+        }
+                
+    }
+}
+@media (max-width: $mobile){
+    .first {
+        &__title {
+            font-weight: 500;
+            font-size: 50px;
+            line-height: 60px;
+            color: #fff;
+            max-width: 619px;
+            margin-bottom: 22px;
+            max-width: 420px;
+        }
+    }
+}
+@media (max-width: $mobileSmall){
+    .first {
+        &__title {
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 60px;
+            color: #fff;
+            max-width: 619px;
+            margin: 180px 0px 22px 0px;
+            width: 320px;
+            
+        }
+    }
+    .second {
+        &__title {
+            
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 42px;
+            position: relative;
+            padding-bottom: 10px;
+            &::after {
+                content: "";
+                display: block;
+                width: 185px;
+                height: 3px;
+                background-color: #e45f5f;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }  
+        }
+    }
+    .intro {
+        &__subtitle {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: #fff;
+            max-width: 546px;
+            margin-bottom: 39px;
+        }
+    }
+    .button {
+        &__enroll {
+            padding: 15px 30px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 16px;
+            background-color: #ff1b1b;
+            border: 0;
+            margin-bottom: 80px;
+            &:hover {
+                background-color: #da1b1b;
+                transition: background-color 0.3s ease 0s;
+            }
+                    
+        }
+    }
+
+}
+
+// Услуги
+
+.title {
+    &__caption {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        opacity: 0;
+        
+    }
+}
+
+
+.second {
+    &__view-all {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #e45f5f;
+    }
+}
+
+.previews {
+    justify-content: center;
+    // overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+    &__item {
+        position: relative;
+        box-shadow: 0 0 5px darkgrey;
+        margin: 0px 25px 30px 25px;
+        opacity: 0;
+    }
+	&__info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(21, 24, 36, 0.6);
+        padding: 10px 20px;
+	}
+	&__text {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color:#fff;  
+	}
+    &__pic {
+        width: 266px;
+        height: 286px;
+
+    }
+}
+
+.previews__item:hover {
+    box-shadow: 0px 5px 10px 2px rgba(80, 34, 34, 0.2);
+    transform: translateY(-5px) scale(1.03) translateZ(0);
+    transition: all 0.35s ease;
+    
+    
+}
+.previews__item:active {
+    box-shadow: 0px 5px 10px 2px rgba(80, 34, 34, 0.2);
+}
+
+.works {
+    &__container {
+        opacity: 0;
+    }
+}
+
+
+// Общая с услугами
+
+.common {
+    &__title {
+    }
+}
+.second {
+    &__title {
+
+    }
+}
+.third {
+    &__title-small {
+        display: block;
+        margin: 20px 0px 20px 0px;
+        font-size: 24px;
+        text-align: center;
+        opacity: 0;
+        
+    }
+}
+
+
+// Услуга
+
+.botoks {
+    
+    &__container {
+        margin-bottom: 20px;
+        
+    }
+    &__image {
+    }
+    &__text {
+    }
+    &__second-title {
+        font-size: 35px;
+        padding: 0px 0px 10px 0px;
+        opacity: 0;
+        
+        
+    }
+}
+.botoks {
+    &__steps {
+        opacity: 0;
+    }
+}
+
+
+.botoks {
+    &__price {
+        opacity: 0;
+    }
+
+}
+.price {
+    
+    &__service {
+        display: block;
+        font-size: 28px;
+        padding: 10px 0px 10px 0px;
+        margin: 10px;
+        align-items: center;
+        text-align: center;
+        
+    }
+}
+
+.btn-service {
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.2);
+    &:hover {
+        transform: translateY(-5px) scale(1.03) translateZ(0);
+        transition: all 0.35s ease;
+    }
+}
+
+
+
+.content {
+    &__pic {
+        float: left;
+        width: 528px;
+        margin: 0px 10px 0px 0px;
+        
+    }
+    &__text {
+        line-height: 26px;
+        text-align: justify;
+        margin-bottom: 15px;
+        opacity: 0;
+    }
+}
+.content {
+    &__text-center {
+        text-align-last: center;
+    }
+}
+
+
+// Список 
+
+ol {
+	list-style-type: none; 
+	counter-reset: num;
+	margin: 0 0 0 60px;
+	padding: 15px 0 5px 0;
+	font-size: 16px;
+    text-align: center;
+}
+ol li {
+	position: relative;	
+	margin: 0 0 0 0;
+	padding: 15px 0 20px 0;
+}
+ol li:before {
+	content: counter(num); 
+	counter-increment: num;
+	display: inline-block;
+	position: absolute;
+	top: 0px;
+	left: 230px;
+	width: 50px;    
+	color: #ef6780;
+	text-align: center;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+@media (max-width: 1090px) {
+    ol li:before {
+        left: 100px;
+    }
+}
+@media (max-width: 991px) {
+    ol li:before {
+        left: -10px;
+    }
+}
+
+@media (max-width: 757px) {
+    ol li:before {
+        left: -40px;
+    }
+}
+
+@media (max-width: $mobile) {
+    ol li {
+        padding: 5px 0 20px 0;
+    }
+}
+
+// Прайс
+
+table.tbl-price {
+    text-decoration: none;
+    border-collapse: collapse;
+    width: 85%;
+    text-align:left;
+}
+table.tbl-price th {
+    text-decoration: none;
+    border-collapse: collapse;
+    text-align: left;
+    font-weight:500;
+    font-size:17px; 
+    color:#000;
+    background-color:#fff8dc;
+}
+table.tbl-price td {
+    font-size: 15px;
+    color: #354251;
+    text-align:left;
+}
+table.tbl-price td, .tbl-price th {
+    white-space: pre-wrap;
+    padding: 10px 15px;
+    line-height: 15px;
+    vertical-align: middle;
+    border: 1px solid rgb(252, 249, 249);
+}
+
+table.tbl-price tr::hover {
+    background-color:#fcfcee;
+}
+table.tbl-price tr:hover td {
+    color:#354251;
+    cursor: default;
+}
+table {
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+
+.mobile-table{width: 100%; max-width: 100%;}
+
+
+
+
+// Контакты
+.contants {
+    &__info {
+    }
+}
+.contacts {
+    &__title {
+        display: block;
+        font-size: 20px;
+        margin: 10px 0px 10px 0px;
+        
+    }
+    &__text {
+        display: block;
+        font-size: 16px;
+        &:last-child{
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+// Цена таблица
+
+table {
+    margin: 10px auto;
+    width: 70%;
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    padding:5px;
+}
+table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    background: #000000;
+    color: #ffffff;
+    
+    
+}
+table td {
+    border:1px solid #b3adad;
+    text-align:left;
+    padding:5px;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+.button-price {
+    margin: 0 auto;
+    align-items: center;
+}
+// Политика
+
+.politika {
+    &__title {
+        display: block;
+        font-size: 18px;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
+        
+    }
+}
+
+// .yamap {
+//     margin: 30px auto;
+// }
+
+
+// 
+
+@media (max-width: $mobile){
+    .content {
+		&__text {
+            display: none;
+		}
+}
+
+}
+@media (max-width: $mobileSmall){
+    .title {
+        &__caption {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 36px;
+            
+        }
+    }
+    
+    .second {
+        &__view-all {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #e45f5f;
+        }
+    }
+    
+    .previews {
+        justify-content: center;
+        // overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+        &__item {
+            position: relative;
+            box-shadow: 0 0 5px darkgrey;
+            margin: 0px 25px 30px 25px;
+            &:hover {
+                box-shadow: 0px 5px 11px 9px rgba(255, 248, 220, 0.2);
+            }
+        }
+        &__info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(21, 24, 36, 0.6);
+            padding: 10px 20px;
+            
+        }
+        &__text {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color:#fff;  
+        }
+        &__pic {
+            width: 266px;
+            height: 286px;
+    
+        }
+    }
+
+}
+
+._watcher-view {
+    opacity: 1;
+    transition: opacity 1.5s;
+}

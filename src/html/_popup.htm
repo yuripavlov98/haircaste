@@ -1,0 +1,51 @@
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content popup_show">
+			<button data-close type="button" class="popup__close">X</button>
+			<div class="form">
+				<form data-ajax data-popup-message="#body" method="POST" action="sendmail.php" id="form" class="form__body">
+					<span class="form__title">Заполните форму</span>
+					<div class="form__item">
+						<input id="forName" type="text" name="client" class="form__input" placeholder="Имя" required>
+					</div>
+					<div class="form__item">
+						<input id="formPhone" type="text" name="phone" class="form__input" placeholder="Номер телефона" required>
+						<input type="hidden" name="action" value="send"/>
+						<input type="text" name="name" value="" style="position: absolute; left: -9999px; display: none;">
+						
+					</div>
+					<div class="form__item">
+						<div class="form__label">Выберите услугу</div>
+						<select name="service" class="form">
+							<option value="Airtouch" selected>Airtouch</option>
+							<option value="Шатуш">Шатуш</option>
+							<option value="Контуринг">Контуринг</option>
+							<option value="Выход из темного">Выход из темного</option>
+							<option value="Тотал блонд">Тотал блонд</option>
+							<option value="Однотонное окрашивание">Однотонное окрашивание</option>
+							<option value="Холодная реконструкция">Холодная реконструкция</option>
+							<option value="Ботокс волос">Ботокс для волос</option>
+							<option value="Пилинг кожи головы">Пилинг кожи головы</option>
+							<option value="Стрижка">Стрижка</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<!-- <textarea onkeyup="javascript:countme();" name="message" id="formMessage" class="form__input" placeholder="Вы можете оставить комментарий"></textarea> -->
+					</div>
+					<button type="submit" class="form__button">Отправить</button>
+					<div class="form__item">
+						<div class="checkbox">
+							<input id="formAgreement" checked type="checkbox" name="agreement" class="chekbox__input">
+							<label for="formAgreement" class="checkbox__label">Нажимая кнопку, я принимаю соглашение о конфиденциальности и соглашаюсь с обработкой персональных данных</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+

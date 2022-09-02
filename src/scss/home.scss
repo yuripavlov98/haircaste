@@ -1,0 +1,27 @@
+//====================================================================================================
+.intro {
+    background: url('../img/intro/intro-hc.jpeg') center / cover no-repeat;
+    min-height: 90vh;
+    z-index: -1;
+    padding-top: 263px;
+    margin-bottom: 50px;
+}
+
+
+
+
+.no-webp .intro{
+    background-size: cover;
+}
+
+.webp .intro{
+    background-size: cover;
+}
+//====================================================================================================
+
+@media (max-width: $mobile){
+    .intro {
+        background: url('../img/intro/intro-hc.jpeg') center right/ cover no-repeat;
+        min-height: 100vh;
+    }
+}

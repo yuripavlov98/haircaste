@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteRule ^(.*)botoks.html$ https://haircaste.ru/botoks-volos.html [R=301,L]
+RewriteRule ^(.*)vyhod-iz-temnogo.html$ https://haircaste.ru/smyvka-volos.html [R=301,L]
+RewriteCond %{HTTP_HOST} ^www.haircaste.ru$ [NC]
+RewriteRule ^(.*)$ https://haircaste.ru/$1 [R=301,L]
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ https://haircaste.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html

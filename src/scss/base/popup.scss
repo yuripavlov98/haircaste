@@ -1,0 +1,221 @@
+body::after {
+	content: "";
+	// background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+
+
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 10px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+	&__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 20px;
+        color: #000;
+        text-decoration: none;
+	}
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #fff;
+	padding: 20px 20px 0px 20px;
+	// width: 100%;
+	max-width: 450px;
+	.lock & {
+		visibility: visible;
+	}
+   
+}
+
+// Форма ОС
+
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 5px 5px;
+    &__body {
+        position: relative;
+        
+    }
+    &__title {
+        font-size: 30px;
+        font-weight: 700;   
+    }
+    &__item {
+        margin: 10px 0px 20px 0px;
+    }
+    &__label {
+        font-size: 16px;
+        display: block;
+        margin: 0px 0px 10px 0px;
+        
+    }
+    &__input {
+        height: 35px;
+        padding: 0px 20px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 14px;
+        // margin-top: 20px;
+        background-color: rgb(247, 247, 247);
+        &:focus {
+            outline: none;
+        }
+   
+    }
+    &__button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 45px;
+        background-color: #ff1b1b;
+        font-weight: 700;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        &:hover{
+            background-color: #f03a3a;
+            transition: background-color 0.3s ease 0s;
+        }
+    }
+}
+.form__body._sending::after {
+    opacity: 1;
+    visibility: visible;
+
+}
+textarea.form__input {
+    min-height: 80px;
+    resize: vertical;
+    padding: 20px;
+}
+.options {
+    padding: 10px 0px 0px 0px;
+    &__item {
+        margin: 0px 0px 10px 0px;
+    }
+    &__input {
+        display: none;
+    }
+    &__label {
+        display: inline-flex;
+        font-size: 16px;
+        line-height: 140%;
+        align-items: center;
+        &::before{
+            content: "";
+            align-self: flex-start;
+            flex: 0 0 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0px 10px 0px 0px; 
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 16px;
+            height: 16px;
+            background-color: #da1b1b;
+            border-radius: 50%;
+        }
+    }
+}
+// .form {
+//     height: 50px;
+//     width: 100%;
+//     border-radius: 5px;
+//     font-size: 18px;
+//     padding: 0 20px;
+// 	background-color: rgb(247, 247, 247);
+// }
+.file {
+    &__item {
+        position: relative;
+    }
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        font-size: 0;
+        cursor: pointer;
+    }
+    &__button {
+        display: inline-flex;
+        min-height: 40px;
+        border-radius: 30px;
+        align-items: center;
+        color: #fff;
+        background-color: #e45f5f;
+        padding: 0px 20px;
+    }
+    &__preview {
+        display: inline-block;
+        max-width: 100px;
+        padding: 10px 0px 0px 0px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.checkbox {
+    margin-top: 20px;
+}
+
+// Капча
+
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+}
